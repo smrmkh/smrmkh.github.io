@@ -109,7 +109,7 @@
 							o
 								? o(t, this.options.smoothScroll)
 								: document.documentElement.scroll({
-										top: t.offsetTop - 108,
+										top: t.offsetTop,
 										left: 0,
 										behavior: "smooth",
 								  });
