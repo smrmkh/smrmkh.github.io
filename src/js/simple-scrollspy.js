@@ -109,7 +109,7 @@
 							o
 								? o(t, this.options.smoothScroll)
 								: document.documentElement.scroll({
-										top: t.offsetTop,
+										top: t.offsetTop - 110,
 										left: 0,
 										behavior: "smooth",
 								  });
@@ -123,7 +123,7 @@
 						}
 						getSectionInView() {
 							for (let t = 0; t < this.sections.length; t++) {
-								const o = this.sections[t].offsetTop,
+								const o = this.sections[t].offsetTop - 110,
 									e = o + this.sections[t].offsetHeight;
 								let s =
 									(document.documentElement.scrollTop ||
