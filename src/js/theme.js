@@ -22,7 +22,11 @@ openSiteMenu.addEventListener("click", function () {
 	menuOverlay.classList.toggle("opacity-0");
 	menuOverlay.classList.toggle("block");
 	menuOverlay.classList.toggle("opacity-30");
-	document.body.style.overflow = "hidden";
+	if (document.body.style.overflow === "hidden") {
+		document.body.style.overflow = null;
+	} else {
+		document.body.style.overflow = "hidden";
+	}
 });
 menuOverlay.addEventListener("click", function () {
 	siteMenu.classList.add("-translate-x-full");
