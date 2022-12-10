@@ -1,3 +1,16 @@
+window.onload = function () {
+	siteHeader();
+};
+document.addEventListener("scroll", function () {
+	siteHeader();
+});
+function siteHeader() {
+	if (window.scrollY > 99) {
+		document.getElementById("site-header").classList.remove("bg-opacity-20");
+	} else {
+		document.getElementById("site-header").classList.add("bg-opacity-20");
+	}
+}
 // site menu
 const openSiteMenu = document.getElementById("open-site-menu");
 const siteMenu = document.getElementById("site-menu");
@@ -9,12 +22,14 @@ openSiteMenu.addEventListener("click", function () {
 	menuOverlay.classList.toggle("opacity-0");
 	menuOverlay.classList.toggle("block");
 	menuOverlay.classList.toggle("opacity-30");
+	document.body.style.overflow = "hidden";
 });
 menuOverlay.addEventListener("click", function () {
 	siteMenu.classList.add("-translate-x-full");
 	openSiteMenu.classList.remove("opened");
 	menuOverlay.classList.add("hidden", "opacity-0");
 	menuOverlay.classList.remove("block", "opacity-30");
+	document.body.style.overflow = null;
 });
 //menu item
 const menuItems = document.querySelectorAll(".menu-item");

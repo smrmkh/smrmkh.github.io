@@ -9,12 +9,13 @@
     <title>tailwind</title>
 </head>
 
-<body class="bg-slate-100 font-sans">
-    <header class="fixed top-0 left-0 z-20 w-screen h-16 py-2 px-4 bg-green-500 flex justify-between items-center">
-        <a id="open-site-menu" href="#">
-            <span class="transition duration-1000 first bg-yellow-400 w-10 h-1.5 block rounded"></span>
-            <span class="transition duration-1000 second bg-yellow-400 w-10 h-1.5 block rounded my-1.5"></span>
-            <span class="transition duration-1000 third bg-yellow-400 w-10 h-1.5 block rounded"></span>
+<body class="bg-slate-50 font-sans">
+    <header id="site-header"
+        class="fixed top-0 border-opacity-60 border-b-[1px] border-b-black bg-opacity-20 left-0 z-20 w-screen h-16 py-2 px-4 transition-colors duration-700 bg-black flex justify-between items-center">
+        <a id="open-site-menu" href="javascript:void(0)">
+            <span class="transition duration-300 first bg-yellow-400 w-10 h-0.5 block rounded"></span>
+            <span class="transition duration-300 second bg-yellow-400 w-10 h-0.5 block rounded my-2.5"></span>
+            <span class="transition duration-300 third bg-yellow-400 w-10 h-0.5 block rounded"></span>
         </a>
         <style>
             #open-site-menu.opened .first {
@@ -30,7 +31,7 @@
             }
         </style>
         <nav id="site-menu"
-            class="transition fixed top-16 left-0 -translate-x-full w-4/5 h-screen z-20 bg-slate-100 text-2xl font-semibold text-yellow-500 py-8 px-4">
+            class="transition duration-300 fixed top-16 left-0 -translate-x-full w-4/5 h-screen z-20 bg-slate-100 text-2xl font-semibold text-yellow-500 py-8 px-4">
             <ul class=" flex flex-col gap-y-4">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Gallery</a></li>
@@ -44,7 +45,7 @@
             <img class="h-12 absolute top-2"
                 src="https://almasrestaurant.co.uk/wp-content/uploads/2021/01/cropped-logo.png" alt="">
         </a>
-        <a href="tel:+442076256968">020 7625 6968</a>
+        <a class="text-yellow-400" href="tel:+442076256968">020 7625 6968</a>
     </header>
     <div class="relative">
         <img src="https://almasrestaurant.co.uk/wp-content/uploads/2021/03/outside-with-halal-1536x1152.jpeg" alt="">
@@ -62,12 +63,12 @@
                 <a class="menu-category py-2 px-4 text-lg" href="#drinks">Drinks</a>
                 <a class="menu-category py-2 px-4 text-lg" href="#smothie">Smothie</a>
                 <div id="menu-categories-indicator"
-                    class="h-1 bg-red-700 min-w-[4rem] rounded absolute bottom-0 left-0">
+                    class="h-0.5 bg-yellow-500 min-w-[4rem] rounded absolute bottom-0 left-0">
                 </div>
             </ul>
         </div>
         <div class="px-4 my-2">
-            <input type="text" name="" placeholder="search" id="menu-filter-input" class="w-full p-2">
+            <input type="search" name="" placeholder="search" id="menu-filter-input" class="w-full p-2">
         </div>
         <div id="menu-item-overlay"><span>close</span></div>
         <div class="px-4">
