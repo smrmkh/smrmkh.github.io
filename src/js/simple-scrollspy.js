@@ -45,7 +45,7 @@
 									{
 										sectionClass: ".scrollspy",
 										menuActiveTarget: "li > a",
-										offset: 0,
+										offset: 10,
 										hrefAttribute: "href",
 										activeClass: "active",
 										scrollContainer: "",
@@ -108,8 +108,9 @@
 								this.options.smoothScrollBehavior;
 							o
 								? o(t, this.options.smoothScroll)
-								: t.scrollIntoView({
-										...this.options.smoothScroll,
+								: document.documentElement.scroll({
+										top: t.offsetTop - 108,
+										left: 0,
 										behavior: "smooth",
 								  });
 						}
@@ -183,9 +184,16 @@
 	})()
 );
 function scrollIntoViewItem(elm) {
-	let menuCategories = document.querySelector(".menu-categories");
-	let elmLeft = elm.offsetLeft;
-	console.log(elmLeft);
+	let ul = document.getElementById("#menu-categories-ul");
+	let left = elm.offsetLeft;
+	let Parentwidth = ul.offsetWidth;
+	let width = elm.offsetWidth;
+	let position = left - (Parentwidth - width) / 2;
+	ul.scroll({
+		top: 0,
+		left: position,
+		behavior: "smooth",
+	});
 }
 function indicatorPosition(elm) {
 	let indicator = document.querySelector("#menu-categories-indicator");
@@ -194,3 +202,9 @@ function indicatorPosition(elm) {
 	indicator.style.marginLeft = position + "px";
 	indicator.style.width = width + "px";
 }
+window.addEventListener("load", function () {
+	let activeItem = document
+		.querySelector("#menu-categories")
+		.querySelector(".active");
+	indicatorPosition(activeItem);
+});

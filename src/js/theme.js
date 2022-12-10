@@ -62,13 +62,8 @@ window.onload = function () {
 		sectionClass: ".scrollspy",
 		activeClass: "active",
 		menuActiveTarget: ".menu-category",
-		offset: 100,
 		// smooth scroll
 		smoothScroll: true,
-		smoothScrollBehavior: function (element) {
-			console.log('run "smoothScrollBehavior"...', element);
-			element.scrollIntoView({ behavior: "smooth" }); // default behavior
-		},
 	});
 };
 const menuFilterInput = document.getElementById("menu-filter-input");
