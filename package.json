@@ -21,6 +21,7 @@
 	"dependencies": {
 		"cross-env": "^7.0.3",
 		"cssnano": "^5.0.17",
+		"leaflet": "^1.9.3",
 		"simple-scrollspy": "^2.3.3"
 	}
 }

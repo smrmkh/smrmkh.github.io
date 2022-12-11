@@ -1,6 +1,13 @@
-window.addEventListener("load", preloader);
+window.addEventListener("DOMContentLoaded", preloader);
 function preloader() {
-	document.getElementById("preloader").remove();
+	const preloader = document.getElementById("preloader");
+	setTimeout(() => {
+		preloader.querySelector("div").remove();
+		preloader.classList.add("opacity-0");
+	}, 200);
+	setTimeout(() => {
+		preloader.remove();
+	}, 500);
 }
 // site menu
 const openSiteMenu = document.getElementById("open-site-menu");
@@ -43,14 +50,10 @@ function stickySiteHeader() {
 const FMItems = document.querySelectorAll(".FM-item");
 const FMOverlay = document.getElementById("FM-overlay");
 for (let FMItem = 0; FMItem < FMItems.length; FMItem++) {
-	FMItems[FMItem].addEventListener("click", function () {
-		for (let FMItem = 0; FMItem < FMItems.length; FMItem++) {
-			const elm = FMItems[FMItem];
-			elm.addEventListener("click", function () {
-				if (!elm.classList.contains("active")) {
-					FMItemOpen(elm);
-				}
-			});
+	const elm = FMItems[FMItem];
+	elm.addEventListener("click", function () {
+		if (!elm.classList.contains("active")) {
+			FMItemOpen(elm);
 		}
 	});
 }
@@ -99,6 +102,7 @@ function FMFilterItem() {
 		}
 	}
 }
+// prevent default a with # href
 document.querySelector('a[href="#"]').addEventListener("click", (e) => {
 	e.preventDefault();
 });
