@@ -43,9 +43,9 @@
 								(this.options = Object.assign(
 									{},
 									{
-										sectionClass: ".scrollspy",
+										sectionClass: ".FM-scrollspy",
 										menuActiveTarget: "li > a",
-										offset: 10,
+										offset: 0,
 										hrefAttribute: "href",
 										activeClass: "active",
 										scrollContainer: "",
@@ -138,7 +138,7 @@
 							t.classList.contains(this.options.activeClass) ||
 								t.classList.add(this.options.activeClass);
 							scrollIntoViewItem(t);
-							indicatorPosition(t);
+							FMIndicatorPosition(t);
 						}
 						removeCurrentActive({ ignore: t }) {
 							const {
@@ -184,7 +184,7 @@
 	})()
 );
 function scrollIntoViewItem(elm) {
-	let ul = document.getElementById("#menu-categories-ul");
+	let ul = document.getElementById("FM-categories");
 	let left = elm.offsetLeft;
 	let Parentwidth = ul.offsetWidth;
 	let width = elm.offsetWidth;
@@ -195,16 +195,28 @@ function scrollIntoViewItem(elm) {
 		behavior: "smooth",
 	});
 }
-function indicatorPosition(elm) {
-	let indicator = document.querySelector("#menu-categories-indicator");
+const FMCatIndicator = document.querySelector("#FM-categories-indicator");
+function FMIndicatorPosition(elm) {
 	let position = elm.offsetLeft;
 	let width = elm.offsetWidth;
-	indicator.style.marginLeft = position + "px";
-	indicator.style.width = width + "px";
+	FMCatIndicator.style.marginLeft = position + "px";
+	FMCatIndicator.style.width = width + "px";
 }
 window.addEventListener("load", function () {
 	let activeItem = document
-		.querySelector("#menu-categories")
+		.querySelector("#FM-categories")
 		.querySelector(".active");
-	indicatorPosition(activeItem);
+	FMIndicatorPosition(activeItem);
 });
+window.addEventListener("load", scrollSpyInit);
+function scrollSpyInit() {
+	scrollSpy("#FM-categories", {
+		sectionClass: ".FM-scrollspy",
+		activeClass: "active",
+		offset: 10,
+		hrefAttribute: "data-target",
+		menuActiveTarget: ".FM-category",
+		// smooth scroll
+		smoothScroll: true,
+	});
+}

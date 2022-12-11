@@ -12,10 +12,10 @@
 <body class="bg-slate-50 font-sans">
     <header id="site-header"
         class="fixed top-0 border-opacity-60 border-b-[1px] border-b-black bg-opacity-20 left-0 z-20 w-screen h-16 py-2 px-4 transition-colors duration-700 bg-black flex justify-between items-center">
-        <a id="open-site-menu" href="javascript:void(0)">
-            <span class="transition duration-300 first bg-yellow-400 w-10 h-0.5 block rounded"></span>
-            <span class="transition duration-300 second bg-yellow-400 w-10 h-0.5 block rounded my-2.5"></span>
-            <span class="transition duration-300 third bg-yellow-400 w-10 h-0.5 block rounded"></span>
+        <a id="open-site-menu" href="#">
+            <span class="transition duration-300 first bg-primary w-10 h-0.5 block rounded"></span>
+            <span class="transition duration-300 second bg-primary w-10 h-0.5 block rounded my-2.5"></span>
+            <span class="transition duration-300 third bg-primary w-10 h-0.5 block rounded"></span>
         </a>
         <style>
             #open-site-menu.opened .first {
@@ -38,1374 +38,1144 @@
                 <li><a href="#">Contact us</a></li>
             </ul>
         </nav>
-        <div id="menu-overlay"
+        <div id="site-menu-overlay"
             class="transition z-10 fixed top-16 left-0 w-screen h-screen overflow-hidden bg-black opacity-0 hidden">
         </div>
         <a href="#">
             <img class="h-12 absolute top-2"
                 src="https://almasrestaurant.co.uk/wp-content/uploads/2021/01/cropped-logo.png" alt="">
         </a>
-        <a class="text-yellow-400" href="tel:+442076256968">020 7625 6968</a>
+        <a class="text-primary" href="tel:+442076256968">020 7625 6968</a>
     </header>
     <div class="relative">
         <img src="https://almasrestaurant.co.uk/wp-content/uploads/2021/03/outside-with-halal-1536x1152.jpeg" alt="">
-        <div class="absolute left-0 w-full bottom-0 bg-black bg-opacity-50 p-4 text-2xl text-center text-yellow-400">
+        <div class="absolute left-0 w-full bottom-0 bg-black bg-opacity-50 p-4 text-2xl text-center text-primary">
             <h1>Almas restaurant</h1>
         </div>
     </div>
     <section class="mt-2">
         <h2 class="text-3xl text-center">menu</h2>
-        <div id="menu-categories" class="sticky top-16 left-0 w-full z-[8] backdrop-blur-xl">
-            <ul id="#menu-categories-ul" class="flex px-4 overflow-x-scroll whitespace-nowrap relative">
-                <a class="menu-category py-2 px-4 text-lg active" href="#starters">Starters</a>
-                <a class="menu-category py-2 px-4 text-lg" href="#main-courses">Main Courses</a>
-                <a class="menu-category py-2 px-4 text-lg" href="#desserts">Desserts</a>
-                <a class="menu-category py-2 px-4 text-lg" href="#drinks">Drinks</a>
-                <a class="menu-category py-2 px-4 text-lg" href="#smothie">Smothie</a>
-                <div id="menu-categories-indicator"
-                    class="h-0.5 bg-yellow-500 min-w-[4rem] rounded absolute bottom-0 left-0">
+        <div class="sticky top-16 left-0 w-full z-[8] backdrop-blur-xl">
+            <ul id="FM-categories" class="flex px-4 overflow-x-scroll whitespace-nowrap relative">
+                <a class="FM-category py-2 px-4 text-lg active" data-target="#starters">Starters</a>
+                <a class="FM-category py-2 px-4 text-lg" data-target="#main-courses">Main Courses</a>
+                <a class="FM-category py-2 px-4 text-lg" data-target="#desserts">Desserts</a>
+                <a class="FM-category py-2 px-4 text-lg" data-target="#drinks">Drinks</a>
+                <a class="FM-category py-2 px-4 text-lg" data-target="#smothie">Smothie</a>
+                <div id="FM-categories-indicator"
+                    class="transition-all ease-linear duration-300 h-0.5 bg-yellow-500 rounded absolute bottom-0 left-0">
                 </div>
             </ul>
         </div>
         <div class="px-4 my-2">
-            <input type="search" name="" placeholder="search" id="menu-filter-input" class="w-full p-2">
+            <input type="text" name="" placeholder="search" id="FM-filter-input" class="w-full p-2">
         </div>
-        <div id="menu-item-overlay"><span>close</span></div>
+        <div id="FM-overlay"><span>close</span></div>
         <div class="px-4">
-            <div class="scrollspy" id="starters">
-                <h3 class="category-inside-menu text-center text-2xl pt-4 pb-2">starters</h3>
+            <div id="starters" class="FM-scrollspy">
+                <h3 class="text-center text-2xl pt-4 pb-2">starters</h3>
                 <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                    class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
                     <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
+                        <img class="FM-image rounded-lg w-16"
                             src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
                             alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                        <div class="FM-header flex flex-1 items-center">
+                            <span class="mx-1.5 text-primary">12(a)</span>
+                            <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
                             </p>
                             <p class="text-bold">£13.50</p>
                         </div>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
+                    <div class="FM-header-second my-2 flex flex-1 items-center">
                         <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
                         <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
                         <p class="text-green-900 text-bold text-lg">£13.50</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                    <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
                         with
                         saffron rice and
                         grilled
                         tomato.</p>
                 </div>
                 <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                    class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
                     <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
+                        <img class="FM-image rounded-lg w-16"
                             src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
                             alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                        <div class="FM-header flex flex-1 items-center">
+                            <span class="mx-1.5 text-primary">12(a)</span>
+                            <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
                             </p>
                             <p class="text-bold">£13.50</p>
                         </div>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
+                    <div class="FM-header-second my-2 flex flex-1 items-center">
                         <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
                         <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
                         <p class="text-green-900 text-bold text-lg">£13.50</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                    <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
                         with
                         saffron rice and
                         grilled
                         tomato.</p>
                 </div>
                 <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                    class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
                     <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
+                        <img class="FM-image rounded-lg w-16"
                             src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
                             alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                        <div class="FM-header flex flex-1 items-center">
+                            <span class="mx-1.5 text-primary">12(a)</span>
+                            <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
                             </p>
                             <p class="text-bold">£13.50</p>
                         </div>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
+                    <div class="FM-header-second my-2 flex flex-1 items-center">
                         <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
                         <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
                         <p class="text-green-900 text-bold text-lg">£13.50</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                    <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
                         with
                         saffron rice and
                         grilled
                         tomato.</p>
                 </div>
                 <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                    class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
                     <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
+                        <img class="FM-image rounded-lg w-16"
                             src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
                             alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                        <div class="FM-header flex flex-1 items-center">
+                            <span class="mx-1.5 text-primary">12(a)</span>
+                            <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
                             </p>
                             <p class="text-bold">£13.50</p>
                         </div>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
+                    <div class="FM-header-second my-2 flex flex-1 items-center">
                         <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
                         <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
                         <p class="text-green-900 text-bold text-lg">£13.50</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                    <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
                         with
                         saffron rice and
                         grilled
                         tomato.</p>
                 </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                <var>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
                         </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
                         </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
                         </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
                         </div>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
+                        </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
+                        </div>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
+                        </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
+                </var>
             </div>
-            <div class="scrollspy" id="main-courses">
-                <h3 class="category-inside-menu text-center text-2xl pt-4 pb-2">Main Courses</h3>
+            <div id="main-courses" class="FM-scrollspy">
+                <h3 class="text-center text-2xl pt-4 pb-2">Main Courses</h3>
                 <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                    class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
                     <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
+                        <img class="FM-image rounded-lg w-16"
                             src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
                             alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                        <div class="FM-header flex flex-1 items-center">
+                            <span class="mx-1.5 text-primary">12(a)</span>
+                            <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
                             </p>
                             <p class="text-bold">£13.50</p>
                         </div>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
+                    <div class="FM-header-second my-2 flex flex-1 items-center">
                         <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
                         <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
                         <p class="text-green-900 text-bold text-lg">£13.50</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                    <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
                         with
                         saffron rice and
                         grilled
                         tomato.</p>
                 </div>
                 <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                    class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
                     <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
+                        <img class="FM-image rounded-lg w-16"
                             src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
                             alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                        <div class="FM-header flex flex-1 items-center">
+                            <span class="mx-1.5 text-primary">12(a)</span>
+                            <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
                             </p>
                             <p class="text-bold">£13.50</p>
                         </div>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
+                    <div class="FM-header-second my-2 flex flex-1 items-center">
                         <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
                         <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
                         <p class="text-green-900 text-bold text-lg">£13.50</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                    <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
                         with
                         saffron rice and
                         grilled
                         tomato.</p>
                 </div>
                 <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                    class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
                     <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
+                        <img class="FM-image rounded-lg w-16"
                             src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
                             alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                        <div class="FM-header flex flex-1 items-center">
+                            <span class="mx-1.5 text-primary">12(a)</span>
+                            <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
                             </p>
                             <p class="text-bold">£13.50</p>
                         </div>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
+                    <div class="FM-header-second my-2 flex flex-1 items-center">
                         <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
                         <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
                         <p class="text-green-900 text-bold text-lg">£13.50</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                    <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
                         with
                         saffron rice and
                         grilled
                         tomato.</p>
                 </div>
                 <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                    class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
                     <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
+                        <img class="FM-image rounded-lg w-16"
                             src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
                             alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                        <div class="FM-header flex flex-1 items-center">
+                            <span class="mx-1.5 text-primary">12(a)</span>
+                            <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
                             </p>
                             <p class="text-bold">£13.50</p>
                         </div>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
+                    <div class="FM-header-second my-2 flex flex-1 items-center">
                         <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
                         <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
                         <p class="text-green-900 text-bold text-lg">£13.50</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                    <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
                         with
                         saffron rice and
                         grilled
                         tomato.</p>
                 </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                <var>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
                         </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
                         </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
                         </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
                         </div>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
+                        </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
+                        </div>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
+                        </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
+                </var>
             </div>
-            <div class="scrollspy" id="desserts">
-                <h3 class="category-inside-menu text-center text-2xl pt-4 pb-2">Desserts</h3>
+            <div id="desserts" class="FM-scrollspy">
+                <h3 class="text-center text-2xl pt-4 pb-2">Desserts</h3>
                 <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                    class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
                     <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
+                        <img class="FM-image rounded-lg w-16"
                             src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
                             alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                        <div class="FM-header flex flex-1 items-center">
+                            <span class="mx-1.5 text-primary">12(a)</span>
+                            <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
                             </p>
                             <p class="text-bold">£13.50</p>
                         </div>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
+                    <div class="FM-header-second my-2 flex flex-1 items-center">
                         <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
                         <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
                         <p class="text-green-900 text-bold text-lg">£13.50</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                    <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
                         with
                         saffron rice and
                         grilled
                         tomato.</p>
                 </div>
                 <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                    class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
                     <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
+                        <img class="FM-image rounded-lg w-16"
                             src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
                             alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                        <div class="FM-header flex flex-1 items-center">
+                            <span class="mx-1.5 text-primary">12(a)</span>
+                            <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
                             </p>
                             <p class="text-bold">£13.50</p>
                         </div>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
+                    <div class="FM-header-second my-2 flex flex-1 items-center">
                         <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
                         <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
                         <p class="text-green-900 text-bold text-lg">£13.50</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                    <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
                         with
                         saffron rice and
                         grilled
                         tomato.</p>
                 </div>
                 <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                    class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
                     <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
+                        <img class="FM-image rounded-lg w-16"
                             src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
                             alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                        <div class="FM-header flex flex-1 items-center">
+                            <span class="mx-1.5 text-primary">12(a)</span>
+                            <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
                             </p>
                             <p class="text-bold">£13.50</p>
                         </div>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
+                    <div class="FM-header-second my-2 flex flex-1 items-center">
                         <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
                         <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
                         <p class="text-green-900 text-bold text-lg">£13.50</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                    <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
                         with
                         saffron rice and
                         grilled
                         tomato.</p>
                 </div>
                 <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                    class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
                     <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
+                        <img class="FM-image rounded-lg w-16"
                             src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
                             alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                        <div class="FM-header flex flex-1 items-center">
+                            <span class="mx-1.5 text-primary">12(a)</span>
+                            <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
                             </p>
                             <p class="text-bold">£13.50</p>
                         </div>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
+                    <div class="FM-header-second my-2 flex flex-1 items-center">
                         <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
                         <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
                         <p class="text-green-900 text-bold text-lg">£13.50</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                    <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
                         with
                         saffron rice and
                         grilled
                         tomato.</p>
                 </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                <var>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
                         </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
                         </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
                         </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
                         </div>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
+                        </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
+                        </div>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
+                        </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
+                </var>
             </div>
-            <div class="scrollspy" id="drinks">
-                <h3 class="category-inside-menu text-center text-2xl pt-4 pb-2">Drinks</h3>
+            <div id="drinks" class="FM-scrollspy">
+                <h3 class="text-center text-2xl pt-4 pb-2">Drinks</h3>
                 <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                    class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
                     <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
+                        <img class="FM-image rounded-lg w-16"
                             src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
                             alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                        <div class="FM-header flex flex-1 items-center">
+                            <span class="mx-1.5 text-primary">12(a)</span>
+                            <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
                             </p>
                             <p class="text-bold">£13.50</p>
                         </div>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
+                    <div class="FM-header-second my-2 flex flex-1 items-center">
                         <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
                         <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
                         <p class="text-green-900 text-bold text-lg">£13.50</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                    <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
                         with
                         saffron rice and
                         grilled
                         tomato.</p>
                 </div>
                 <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                    class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
                     <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
+                        <img class="FM-image rounded-lg w-16"
                             src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
                             alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                        <div class="FM-header flex flex-1 items-center">
+                            <span class="mx-1.5 text-primary">12(a)</span>
+                            <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
                             </p>
                             <p class="text-bold">£13.50</p>
                         </div>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
+                    <div class="FM-header-second my-2 flex flex-1 items-center">
                         <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
                         <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
                         <p class="text-green-900 text-bold text-lg">£13.50</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                    <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
                         with
                         saffron rice and
                         grilled
                         tomato.</p>
                 </div>
                 <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                    class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
                     <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
+                        <img class="FM-image rounded-lg w-16"
                             src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
                             alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                        <div class="FM-header flex flex-1 items-center">
+                            <span class="mx-1.5 text-primary">12(a)</span>
+                            <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
                             </p>
                             <p class="text-bold">£13.50</p>
                         </div>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
+                    <div class="FM-header-second my-2 flex flex-1 items-center">
                         <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
                         <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
                         <p class="text-green-900 text-bold text-lg">£13.50</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                    <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
                         with
                         saffron rice and
                         grilled
                         tomato.</p>
                 </div>
                 <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                    class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
                     <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
+                        <img class="FM-image rounded-lg w-16"
                             src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
                             alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                        <div class="FM-header flex flex-1 items-center">
+                            <span class="mx-1.5 text-primary">12(a)</span>
+                            <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
                             </p>
                             <p class="text-bold">£13.50</p>
                         </div>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
+                    <div class="FM-header-second my-2 flex flex-1 items-center">
                         <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
                         <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
                         <p class="text-green-900 text-bold text-lg">£13.50</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                    <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
                         with
                         saffron rice and
                         grilled
                         tomato.</p>
                 </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                <var>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
                         </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
                         </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
                         </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
                         </div>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
+                        </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
+                        </div>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
+                        </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
+                </var>
             </div>
-            <div class="scrollspy" id="smothie">
-                <h3 class="category-inside-menu text-center text-2xl pt-4 pb-2">Smothie</h3>
+            <div id="smothie" class="FM-scrollspy">
+                <h3 class="text-center text-2xl pt-4 pb-2">Smothie</h3>
                 <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                    class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
                     <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
+                        <img class="FM-image rounded-lg w-16"
                             src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
                             alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                        <div class="FM-header flex flex-1 items-center">
+                            <span class="mx-1.5 text-primary">12(a)</span>
+                            <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
                             </p>
                             <p class="text-bold">£13.50</p>
                         </div>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
+                    <div class="FM-header-second my-2 flex flex-1 items-center">
                         <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
                         <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
                         <p class="text-green-900 text-bold text-lg">£13.50</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                    <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
                         with
                         saffron rice and
                         grilled
                         tomato.</p>
                 </div>
                 <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                    class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
                     <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
+                        <img class="FM-image rounded-lg w-16"
                             src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
                             alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                        <div class="FM-header flex flex-1 items-center">
+                            <span class="mx-1.5 text-primary">12(a)</span>
+                            <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
                             </p>
                             <p class="text-bold">£13.50</p>
                         </div>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
+                    <div class="FM-header-second my-2 flex flex-1 items-center">
                         <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
                         <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
                         <p class="text-green-900 text-bold text-lg">£13.50</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                    <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
                         with
                         saffron rice and
                         grilled
                         tomato.</p>
                 </div>
                 <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                    class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
                     <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
+                        <img class="FM-image rounded-lg w-16"
                             src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
                             alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                        <div class="FM-header flex flex-1 items-center">
+                            <span class="mx-1.5 text-primary">12(a)</span>
+                            <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
                             </p>
                             <p class="text-bold">£13.50</p>
                         </div>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
+                    <div class="FM-header-second my-2 flex flex-1 items-center">
                         <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
                         <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
                         <p class="text-green-900 text-bold text-lg">£13.50</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                    <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
                         with
                         saffron rice and
                         grilled
                         tomato.</p>
                 </div>
                 <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                    class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
                     <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
+                        <img class="FM-image rounded-lg w-16"
                             src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
                             alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                        <div class="FM-header flex flex-1 items-center">
+                            <span class="mx-1.5 text-primary">12(a)</span>
+                            <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
                             </p>
                             <p class="text-bold">£13.50</p>
                         </div>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
+                    <div class="FM-header-second my-2 flex flex-1 items-center">
                         <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
                         <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
                         <p class="text-green-900 text-bold text-lg">£13.50</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                    <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
                         with
                         saffron rice and
                         grilled
                         tomato.</p>
                 </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                <var>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
                         </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
                         </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
                         </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
-                    </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
-                <div
-                    class="relative menu-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
-                    <div class="flex items-center">
-                        <img class="menu-item-image rounded-lg w-16"
-                            src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
-                            alt="">
-                        <div class="menu-item-header flex flex-1 items-center">
-                            <span class="mx-1.5 text-yellow-400">12(a)</span>
-                            <p class="menu-item-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
-                            </p>
-                            <p class="text-bold">£13.50</p>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
                         </div>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
+                        </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <div class="menu-item-header-second my-2 flex flex-1 items-center">
-                        <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
-                        <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
-                        <p class="text-green-900 text-bold text-lg">£13.50</p>
+                    <div
+                        class="relative FM-item w-full transition-all max-h-20 overflow-hidden flex flex-col gap-y-1 rounded-lg p-2 shadow mb-2">
+                        <div class="flex items-center">
+                            <img class="FM-image rounded-lg w-16"
+                                src="https://almasrestaurant.co.uk/wp-content/uploads/2021/05/Koobideh-with-rice-1080x1080.jpeg"
+                                alt="">
+                            <div class="FM-header flex flex-1 items-center">
+                                <span class="mx-1.5 text-primary">12(a)</span>
+                                <p class="FM-title flex-1 text-md capitalize text-gray-800">jujeh kabab (boneless)
+                                </p>
+                                <p class="text-bold">£13.50</p>
+                            </div>
+                        </div>
+                        <div class="FM-header-second my-2 flex flex-1 items-center">
+                            <span class="text-xl mx-1.5 text-yellow-600">12(a)</span>
+                            <p class="flex-1 text-lg capitalize text-gray-400">jujeh kabab (boneless)</p>
+                            <p class="text-green-900 text-bold text-lg">£13.50</p>
+                        </div>
+                        <p class="FM-description text-sm text-gray-100">Two skewers of grilled minced lamb served
+                            with
+                            saffron rice and
+                            grilled
+                            tomato.</p>
                     </div>
-                    <p class="menu-item-description text-sm text-gray-100">Two skewers of grilled minced lamb served
-                        with
-                        saffron rice and
-                        grilled
-                        tomato.</p>
-                </div>
+                </var>
             </div>
         </div>
     </section>

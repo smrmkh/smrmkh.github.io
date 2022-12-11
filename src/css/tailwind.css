@@ -1,22 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* menu */
-.menu-item {
+/* food menu (FM) */
+.FM-item {
 	transition: all linear 0.25s;
 }
-.menu-item.active {
+.FM-item.active {
 	max-height: 30rem;
 	margin: 1rem 0;
 	z-index: 80;
 }
-.menu-item-image {
+.FM-image {
 	transition: width ease-in-out 0.25s;
 }
-.menu-item.active .menu-item-image {
+.FM-item.active .FM-image {
 	width: 100%;
 }
-.menu-item-header {
+.FM-header {
 	transition-property: transform, opacity;
 	transform-origin: right;
 	opacity: 1;
@@ -24,12 +24,12 @@
 	transition-delay: 0.15s;
 	transition-timing-function: linear;
 }
-.menu-item.active .menu-item-header {
+.FM-item.active .FM-header {
 	opacity: 0;
 	transform: scale(0);
 	transition-delay: 0s;
 }
-.menu-item-header-second {
+.FM-item-header-second {
 	max-height: 0;
 	overflow: hidden;
 	opacity: 0;
@@ -39,12 +39,12 @@
 	transform-origin: left;
 	transition-timing-function: linear;
 }
-.menu-item.active .menu-item-header-second {
+.FM-item.active .FM-header-second {
 	max-height: 5rem;
 	opacity: 1;
 	transform: scale(1);
 }
-.menu-item-description {
+.FM-description {
 	transform: translateY(30px) scaley(0);
 	max-height: 0;
 	opacity: 0;
@@ -55,13 +55,13 @@
 	transition-timing-function: linear;
 	overflow: hidden;
 }
-.menu-item.active .menu-item-description {
+.FM-item.active .FM-description {
 	transform: translateX(0) scaley(1);
 	max-height: 5rem;
 	transition-delay: 0s;
 	opacity: 1;
 }
-#menu-item-overlay {
+#FM-overlay {
 	width: 100vw;
 	height: 100vh;
 	background: #000;
@@ -74,28 +74,20 @@
 	visibility: hidden;
 	text-align: right;
 }
-#menu-item-overlay span {
+#FM-overlay span {
 	color: #fff;
 	display: block;
 	margin: 0.5rem 1rem 0 0;
 	font-size: 1.2rem;
 }
-#menu-item-overlay.active {
+#FM-overlay.active {
 	transition: all 0.25s ease-in-out 0.25s;
 	opacity: 0.95;
 	visibility: visible;
 }
-.menu-category.indicator {
-	border-bottom: 2px solid yellow;
-	transition: all ease-in-out 2s;
+#FM-categories {
 	scrollbar-width: none;
 }
-#menu-categories-indicator {
-	transition: all ease-in-out 0.3s;
-}
-#menu-categories ul {
-	scrollbar-width: none;
-}
-#menu-categories ul::-webkit-scrollbar {
+#FM-categories::-webkit-scrollbar {
 	display: none;
 }
