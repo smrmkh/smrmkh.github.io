@@ -40,9 +40,9 @@ window.addEventListener("load", stickySiteHeader);
 document.addEventListener("scroll", stickySiteHeader);
 function stickySiteHeader() {
 	if (window.scrollY > 64) {
-		document.getElementById("site-header").classList.remove("bg-opacity-20");
+		document.getElementById("site-header").classList.remove("bg-opacity-10");
 	} else {
-		document.getElementById("site-header").classList.add("bg-opacity-20");
+		document.getElementById("site-header").classList.add("bg-opacity-10");
 	}
 }
 //food menu (FM)

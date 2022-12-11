@@ -19,7 +19,6 @@
 	width: 1em;
 	margin-right: 0.2em;
 	text-align: center;
-	/* opacity: .8; */
 	font-variant: normal;
 	text-transform: none;
 	-webkit-font-smoothing: antialiased;
@@ -28,7 +27,7 @@
 }
 .icon-phone:before {
 	content: "\e800";
-} /* '' */
+}
 .icon-instagram:before {
 	content: "\f16d";
-} /* '' */
+}
