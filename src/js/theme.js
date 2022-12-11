@@ -1,3 +1,7 @@
+window.addEventListener("load", preloader);
+function preloader() {
+	document.getElementById("preloader").remove();
+}
 // site menu
 const openSiteMenu = document.getElementById("open-site-menu");
 const siteMenu = document.getElementById("site-menu");

@@ -461,6 +461,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .z-\[8\] {
   z-index: 8;
 }
+.z-50 {
+  z-index: 50;
+}
 .my-2\.5 {
   margin-top: 0.625rem;
   margin-bottom: 0.625rem;
