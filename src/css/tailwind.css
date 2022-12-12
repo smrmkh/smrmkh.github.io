@@ -85,6 +85,7 @@
 	opacity: 0.95;
 	visibility: visible;
 }
+
 #FM-categories {
 	scrollbar-width: none;
 }
@@ -93,6 +94,12 @@
 }
 #FM-filter-input {
 	border-radius: 6px;
-	background: #ffffff;
-	box-shadow: inset 6px 6px 8px #e6e6e6, inset -6px -6px 8px #ffffff;
+	background: #f8fafc;
+	box-shadow: inset 6px 6px 8px #dfe1e3, inset -6px -6px 8px #ffffff;
+}
+
+#FM-filter-input.FM-filter-input-md {
+	border-radius: 6px;
+	background: #e2e8f0;
+	box-shadow: inset 6px 6px 8px #cbd1d8, inset -6px -6px 8px #f9ffff;
 }

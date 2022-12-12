@@ -1,8 +1,10 @@
+// preloader
 window.addEventListener("DOMContentLoaded", preloader);
 function preloader() {
 	const preloader = document.getElementById("preloader");
 	setTimeout(() => {
 		preloader.querySelector("div").remove();
+		preloader.querySelector("p").remove();
 		preloader.classList.add("opacity-0");
 	}, 200);
 	setTimeout(() => {
@@ -59,43 +61,49 @@ if (window.innerWidth < laptopWidth) {
 }
 //food menu (FM)
 //food menu lightbox
+//food menu lightbox on mobile
+if (window.innerWidth < laptopWidth) {
+	function FMItemclose() {
+		let elm = document.querySelector(".FM-item.active");
+		console.log(elm);
+		elm.style.marginTop = null;
+		elm.style.marginBottom = null;
+		FMOverlay.classList.remove("active");
+		setTimeout(function () {
+			elm.classList.remove("active");
+		}, 250);
+		setTimeout(function () {
+			document.body.style.overflow = null;
+		}, 500);
+	}
+	function FMItemOpen(elm) {
+		document.body.style.overflow = "hidden";
+		elm.classList.add("active");
+		FMOverlay.classList.add("active");
+		setTimeout(function () {
+			let elmHeight = elm.offsetHeight;
+			let elmOffsetTop = elm.offsetTop;
+			let screenHeight = screen.height;
+			let scrollY = window.scrollY;
+			let newLocation =
+				(screenHeight - elmHeight) / 2 + scrollY - elmOffsetTop;
+			elm.style.marginTop = newLocation + "px";
+			elm.style.marginBottom = -newLocation + 32 + "px";
+		}, 250);
+	}
+}
+//food menu lightbox event
 const FMItems = document.querySelectorAll(".FM-item");
 const FMOverlay = document.getElementById("FM-overlay");
 for (let FMItem = 0; FMItem < FMItems.length; FMItem++) {
 	const elm = FMItems[FMItem];
-	elm.addEventListener("click", function () {
+	elm.addEventListener("click", () => {
 		if (!elm.classList.contains("active")) {
 			FMItemOpen(elm);
 		}
 	});
 }
-function FMItemOpen(elm) {
-	document.body.style.overflow = "hidden";
-	elm.classList.add("active");
-	FMOverlay.classList.add("active");
-	setTimeout(function () {
-		let elmHeight = elm.offsetHeight;
-		let elmOffsetTop = elm.offsetTop;
-		let screenHeight = screen.height;
-		let scrollY = window.scrollY;
-		let newLocation = (screenHeight - elmHeight) / 2 + scrollY - elmOffsetTop;
-		elm.style.marginTop = newLocation + "px";
-		elm.style.marginBottom = -newLocation + 32 + "px";
-	}, 250);
-}
 FMOverlay.addEventListener("click", FMItemclose);
-function FMItemclose() {
-	let elm = document.querySelector(".FM-item.active");
-	elm.style.marginTop = null;
-	elm.style.marginBottom = null;
-	FMOverlay.classList.remove("active");
-	setTimeout(function () {
-		elm.classList.remove("active");
-	}, 250);
-	setTimeout(function () {
-		document.body.style.overflow = null;
-	}, 500);
-}
 //food menu filter
 if (window.innerWidth >= laptopWidth) {
 	document.getElementById("FM-filter-input").remove();
