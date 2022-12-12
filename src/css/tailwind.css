@@ -91,3 +91,8 @@
 #FM-categories::-webkit-scrollbar {
 	display: none;
 }
+#FM-filter-input {
+	border-radius: 6px;
+	background: #ffffff;
+	box-shadow: inset 6px 6px 8px #e6e6e6, inset -6px -6px 8px #ffffff;
+}

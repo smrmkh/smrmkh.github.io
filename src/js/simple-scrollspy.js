@@ -101,6 +101,7 @@
 								(this.removeCurrentActive({ ignore: o }),
 								this.setActive(o));
 						}
+
 						scrollTo(t) {
 							const o =
 								"function" ==
@@ -195,13 +196,7 @@ function scrollIntoViewItem(elm) {
 		behavior: "smooth",
 	});
 }
-const FMCatIndicator = document.querySelector("#FM-categories-indicator");
-function FMIndicatorPosition(elm) {
-	let position = elm.offsetLeft;
-	let width = elm.offsetWidth;
-	FMCatIndicator.style.marginLeft = position + "px";
-	FMCatIndicator.style.width = width + "px";
-}
+
 window.addEventListener("load", function () {
 	let activeItem = document
 		.querySelector("#FM-categories")
@@ -215,8 +210,26 @@ function scrollSpyInit() {
 		activeClass: "active",
 		offset: 10,
 		hrefAttribute: "data-target",
-		menuActiveTarget: ".FM-category",
 		// smooth scroll
 		smoothScroll: true,
 	});
+}
+
+if (window.innerWidth >= laptopWidth) {
+	const FMCatIndicator = document.querySelector("#FM-categories-indicator-md");
+	function FMIndicatorPosition(elm) {
+		let position = elm.offsetTop;
+		let Height = elm.offsetHeight;
+		FMCatIndicator.style.marginTop = position + "px";
+		FMCatIndicator.style.height = Height + "px";
+	}
+	//
+} else {
+	const FMCatIndicator = document.querySelector("#FM-categories-indicator");
+	function FMIndicatorPosition(elm) {
+		let position = elm.offsetLeft;
+		let width = elm.offsetWidth;
+		FMCatIndicator.style.marginLeft = position + "px";
+		FMCatIndicator.style.width = width + "px";
+	}
 }

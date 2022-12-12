@@ -36,13 +36,25 @@ function hideMenu() {
 	document.body.style.overflow = null;
 }
 // sticky site header
-window.addEventListener("load", stickySiteHeader);
-document.addEventListener("scroll", stickySiteHeader);
-function stickySiteHeader() {
-	if (window.scrollY > 64) {
-		document.getElementById("site-header").classList.remove("bg-opacity-10");
-	} else {
-		document.getElementById("site-header").classList.add("bg-opacity-10");
+if (window.innerWidth < laptopWidth) {
+	window.addEventListener("load", stickySiteHeader);
+	window.addEventListener("scroll", stickySiteHeader);
+	const siteHeader = document.getElementById("site-header");
+	const FMCategoriesParent = document.getElementById("FM-categories-parent");
+	let lastScrollPosition = 0;
+	function stickySiteHeader() {
+		if (lastScrollPosition < window.scrollY) {
+			siteHeader.classList.add("-top-16");
+			siteHeader.classList.remove("top-0");
+			FMCategoriesParent.classList.add("top-0");
+			FMCategoriesParent.classList.remove("top-16");
+		} else {
+			siteHeader.classList.add("top-0");
+			siteHeader.classList.remove("-top-16");
+			FMCategoriesParent.classList.add("top-16");
+			FMCategoriesParent.classList.remove("top-0");
+		}
+		lastScrollPosition = window.scrollY;
 	}
 }
 //food menu (FM)
@@ -85,6 +97,12 @@ function FMItemclose() {
 	}, 500);
 }
 //food menu filter
+if (window.innerWidth >= laptopWidth) {
+	document.getElementById("FM-filter-input").remove();
+	document.getElementById("FM-filter-input-md").id = "FM-filter-input";
+} else {
+	document.getElementById("FM-filter-input-md").remove();
+}
 const FMFilterInput = document.getElementById("FM-filter-input");
 FMFilterInput.addEventListener("keyup", FMFilterItem);
 function FMFilterItem() {
@@ -93,7 +111,7 @@ function FMFilterItem() {
 	let FMItems = document.querySelectorAll(".FM-item");
 	for (let item = 0; item < FMItems.length; item++) {
 		const elm = FMItems[item];
-		let elmValueTag = elm.querySelector(".FM-item-title");
+		let elmValueTag = elm.querySelector(".FM-title");
 		let elmValue = elmValueTag.textContent || elmValueTag.innerHtml;
 		if (elmValue.toUpperCase().indexOf(value) > -1) {
 			elm.style.display = null;
