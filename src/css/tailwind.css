@@ -4,6 +4,7 @@
 /* food menu (FM) */
 .FM-item {
 	transition: all linear 0.25s;
+	overflow: hidden;
 }
 .FM-item.active {
 	max-height: 30rem;
@@ -66,9 +67,10 @@
 	height: 100vh;
 	background: #000;
 	opacity: 0;
-	transition: all 0.25s ease-in-out 0s;
+	transition: all 0.25s ease-in-out;
 	position: fixed;
 	top: 0;
+	padding: 1rem 2rem 0 0;
 	left: 0;
 	z-index: 25;
 	visibility: hidden;
@@ -77,7 +79,6 @@
 #FM-overlay span {
 	color: #fff;
 	display: block;
-	margin: 0.5rem 1rem 0 0;
 	font-size: 1.2rem;
 }
 #FM-overlay.active {
@@ -102,4 +103,31 @@
 	border-radius: 6px;
 	background: #e2e8f0;
 	box-shadow: inset 6px 6px 8px #cbd1d8, inset -6px -6px 8px #f9ffff;
+}
+
+@media screen and (min-width: 768px) {
+	.FM-description {
+		overflow: visible;
+		opacity: 1;
+		transform: none;
+		max-height: none;
+	}
+	.FM-item {
+		overflow: visible;
+	}
+	.FM-image {
+		transition: all linear 0.25s;
+		cursor: pointer;
+	}
+	.FM-image.active {
+		z-index: 80;
+	}
+	#FM-overlay {
+		transition: all 0.25s ease-in-out;
+	}
+	#FM-overlay.active {
+		transition: all 0.25s ease-in-out;
+		opacity: 0.95;
+		visibility: visible;
+	}
 }
