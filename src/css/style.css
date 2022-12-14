@@ -16,13 +16,18 @@
 #open-site-menu.opened .third {
 	transform: translatey(-8px) rotate(-45deg) scaleX(1.2);
 }
+#site-menu li,
+a {
+	display: block;
+}
 /* food menu (FM) */
 .FM-item {
 	transition: all linear 0.25s;
 	overflow: hidden;
 }
 .FM-item.active {
-	max-height: 30rem;
+	max-height: 42rem;
+	max-width: 34rem;
 	margin: 1rem 0;
 	z-index: 80;
 }
@@ -131,10 +136,12 @@
 	}
 	.FM-image {
 		transition: all linear 0.25s;
-		cursor: pointer;
+		cursor: zoom-in;
 	}
 	.FM-image.active {
 		z-index: 80;
+		filter: brightness(0.9);
+		cursor: zoom-out;
 	}
 	#FM-overlay {
 		transition: all 0.25s ease-in-out;

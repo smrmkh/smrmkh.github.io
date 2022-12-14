@@ -41,6 +41,30 @@ if (window.innerWidth < laptopWidth) {
 } else {
 	document.getElementById("open-site-menu").remove();
 }
+// site menu hover effect on desktop
+if (window.innerWidth >= laptopWidth) {
+	const siteMenu = document.getElementById("site-menu");
+	let currenPage = document.querySelector("#site-menu li.current-menu-item");
+	indicatorPosition(currenPage);
+	siteMenu.addEventListener("mouseout", () => {
+		indicatorPosition(currenPage);
+	});
+	const items = siteMenu.getElementsByTagName("li");
+	for (let i = 0; i < items.length; i++) {
+		const elm = items[i];
+		elm.addEventListener("mouseover", () => {
+			siteMenu.getElementsByClassName("current-menu-item")[0];
+			indicatorPosition(elm);
+		});
+	}
+	function indicatorPosition(elm) {
+		let currentItem = elm;
+		const indicator = document.getElementById("site-menu-indicator");
+		indicator.style.transform =
+			"translateX(" + (currentItem.offsetLeft + 8) + "px)";
+		indicator.style.width = currentItem.offsetWidth - 16 + "px";
+	}
+}
 // sticky site header
 if (window.innerWidth < laptopWidth) {
 	window.addEventListener("load", stickySiteHeader);
@@ -70,26 +94,28 @@ if (window.innerWidth < laptopWidth) {
 	function FMItemOpen(elm) {
 		document.body.style.overflow = "hidden";
 		elm.classList.add("active");
+		const elmImage = elm.querySelector(".FM-image");
+		elmImage.removeAttribute("srcset");
+		elmImage.removeAttribute("sizes");
 		FMOverlay.classList.add("active");
 		setTimeout(function () {
 			let elmHeight = elm.offsetHeight;
-			let elmOffsetTop = elm.offsetTop;
+			let elmWidth = elm.offsetWidth;
+			let elmOffsetTop = elm.getBoundingClientRect().top;
+			let elmOffsetLeft = elm.getBoundingClientRect().left;
 			let screenHeight = window.innerHeight;
-			let scrollY = window.scrollY;
-			let newLocation =
-				(screenHeight - elmHeight) / 2 + scrollY - elmOffsetTop;
-			elm.style.marginTop = newLocation + "px";
-			elm.style.marginBottom = -newLocation + "px";
+			let screenWidth = window.innerWidth;
+			let XLocation = (screenWidth - elmWidth) / 2 - elmOffsetLeft;
+			let yLocation = (screenHeight - elmHeight) / 2 - elmOffsetTop;
+			elm.style.transform =
+				"translateY(" + yLocation + "px) translateX(" + XLocation + "px)";
 		}, 250);
 	}
 	function FMItemclose() {
 		let elm = document.querySelector(".FM-item.active");
-		elm.style.marginTop = null;
-		elm.style.marginBottom = null;
+		elm.style.transform = null;
 		FMOverlay.classList.remove("active");
-		setTimeout(function () {
-			elm.classList.remove("active");
-		}, 250);
+		elm.classList.remove("active");
 		setTimeout(function () {
 			document.body.style.overflow = null;
 		}, 500);
@@ -147,6 +173,8 @@ else {
 		elm.addEventListener("click", () => {
 			if (!elm.classList.contains("active")) {
 				FMItemOpen(elm);
+			} else {
+				FMItemclose();
 			}
 		});
 	}
